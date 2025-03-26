@@ -1,15 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-
-import { CardComponent } from '~core/components/card/card.component';
-import { ROUTE_PATHS } from '~core/constants/route-paths.const';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterModule, CardComponent],
+  imports: [],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-  routePaths = ROUTE_PATHS;
-}
+export class HomeComponent {}
