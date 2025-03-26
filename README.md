@@ -2,58 +2,48 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
 
-## Development server
+## Requirements
 
-To start a local development server, run:
+### PNPM
 
-```bash
-ng serve
+This project uses `pnpm` to manage node modules.
+Installation:
+```sh
+npm install -g pnpm@latest-10
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Node.js version 18.19.1 or newer
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+Installation avec `nvm`:
+```sh
+nvm install --lts
+nvm use --lts
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Angular CLI (optionnal)
 
-```bash
-ng generate --help
+Installation:
+```sh
+pnpm install -g @angular/cli
 ```
 
-## Building
+## Get started
 
-To build the project run:
-
-```bash
-ng build
+To start the project locally use the command:
+```sh
+pnpm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Project structure
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+* **app**
+	+ **core**: Core module containing shared resources
+		- **components**: Reusable UI components
+		- **constants**: Global constants
+		- **enums**: Global Enums
+		- **resources**: Resources used to fetch data from APIs
+		- **services**: Global services
+		- **types**: shared types
+	+ **features**: Application feature modules
+		- **buy-transport-ticket**: Buy transport ticket with Dogecoin
+		- **cryptocurrency-metrics**: Different metrics about cryptocurrencies
