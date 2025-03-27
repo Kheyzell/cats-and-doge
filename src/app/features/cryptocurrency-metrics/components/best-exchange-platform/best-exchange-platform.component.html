@@ -1,8 +1,0 @@
-<app-card
-  title="Meilleurs plateforme de transaction de ces dernières 24 heures"
-  [isLoading]="isLoading()"
-  [errorMessage]="hasError() ? 'Les plateformes n\'ont pas pu être chargé' : ''"
->
-  <div> {{ name() | titlecase }} </div>
-  <div>Avec un volume de ${{ last24hVolumeUsd() | number : "1.3-3" }} en 24h</div>
-</app-card>
