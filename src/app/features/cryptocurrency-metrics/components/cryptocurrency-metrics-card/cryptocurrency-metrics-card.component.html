@@ -1,0 +1,12 @@
+<app-card
+  [title]="cryptocurrencyId() | titlecase"
+  [isLoading]="!priceUsd()"
+  [errorMessage]="hasError() ? 'Le prix n\'a pas pu être chargé.' : ''"
+>
+  <div class="text-center" [class]="bestCurrencyClasses()">
+    <span>${{ priceUsd() | number : "1.3-3" }}</span>
+    @if (isBestCurrency()) {
+      <span class="text-xl text-orange-500"> Meilleure plateforme d’échange </span>
+    }
+</div>
+</app-card>

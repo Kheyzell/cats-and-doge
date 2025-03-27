@@ -1,25 +1,6 @@
-import { Component } from "@angular/core";
-import { MatButtonModule } from '@angular/material/button';
-import { bootstrapApplication } from "@angular/platform-browser";
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/app.component';
 
-@Component({
-  selector: "app-root",
-  imports: [MatButtonModule],
-  template: `
-    <h1>Hello from {{ name }}!</h1>
-    <a target="_blank" href="https://angular.dev/overview">
-      Learn more about Angular
-    </a>
-    <button
-      mat-flat-button
-      color="primary"
-    >
-      Primary
-    </button>
-  `,
-})
-export class App {
-  name = "Angular";
-}
-
-bootstrapApplication(App);
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));
